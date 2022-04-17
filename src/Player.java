@@ -22,6 +22,10 @@ public class Player {
         } return score;
     }
 
+    public void addScore(){
+        score += 100;
+    }
+
     public String getName()
     {
         return name;
@@ -31,12 +35,20 @@ public class Player {
         playerInventory.add(newM);
     }
     public void info(){
-        System.out.println(name + " has " + score + " points inventory:" );
-        for(Monsters cur : playerInventory){
-            System.out.println(cur.getName());
+        System.out.println(name + " has " + score + " points" );
+
+
+    }
+
+    public void getInvent(){
+        System.out.println("Inventory:");
+        for(Monsters cur : playerInventory) {
+            System.out.println(cur.getName() + ":");
             System.out.println(cur.getType());
             System.out.println();
+
         }
     }
+
 
 }
